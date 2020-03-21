@@ -1,5 +1,22 @@
+var currentTime = moment().format("H");
+
 for (var i = 9; i < 18; i++) {
   console.log(i);
+
+  if (currentTime > i) {
+    console.log("found current time");
+    $("#" + i).attr("class", "past");
+  }
+
+  if (currentTime == i) {
+    console.log("found current time");
+    $("#" + i).attr("class", "present");
+  }
+
+  if (currentTime < i) {
+    console.log("found current time");
+    $("#" + i).attr("class", "future");
+  }
 }
 
 // in order to get one segment or block of time on page...
