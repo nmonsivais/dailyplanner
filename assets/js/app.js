@@ -1,14 +1,21 @@
-//create inputs
-
-//add save button
-//
+for (var i = 9; i < 18; i++) {
+  console.log(i);
+}
 
 // in order to get one segment or block of time on page...
-// #1 create div with class of row
+
+// #1 create div with class of row and append it to container.
+
+// var row = $("<row>");
+// var column = $("<col-XL-4>");
+// var row3column = $(row).append(column);
+// var container = document.querySelector(".container");
+
+// container.append(row3column);
 
 // #2 first column will contain time via moment (use placeholer to start)
 // #3 second column will contain user INPUT field
-// #4 third column will contain save BUTTON 
+// #4 third column will contain save BUTTON
 // ---------------------------------------------------------------
 // #5 to capture user information from the INPUT field, you will
 // store their information via a variable (google how to get
