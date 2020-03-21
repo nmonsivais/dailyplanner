@@ -1,3 +1,4 @@
+// call local storage for 9 am to 5 pm. 1 by 1 or forloop with i being 9.  Use i to grab input. take value from local storage and put it there.
 var currentTime = moment().format("H");
 
 for (var i = 9; i < 18; i++) {
@@ -18,6 +19,19 @@ for (var i = 9; i < 18; i++) {
     $("#" + i).attr("class", "future");
   }
 }
+
+$(".saveBtn").on("click", function() {
+  // Grab data attr for reference to input id
+
+  var dataHour = $(this).attr("data-hour");
+
+  // Use that value to target the input element
+  var input = $("#" + dataHour).val();
+
+  // Save value to local storage
+  localStorage.setItem(dataHour, input);
+  console.log(localStorage.getItem(dataHour));
+});
 
 // in order to get one segment or block of time on page...
 
